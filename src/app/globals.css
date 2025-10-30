@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.cookie-consent-popup {
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  justify-content: space-between; /* justify-between */
+  padding: 1.5rem; /* p-6 */
+  color: white; /* text-white */
+  background-color: black; /* bg-black */
+  width: 18rem; /* w-72 */
+  height: 20rem; /* h-80 */
+  border-radius: 1.5rem; /* rounded-3xl */
+}
+
+.cookie-consent-popup-header {
+  display: flex; /* flex */
+  justify-content: space-between; /* justify-between */
+}
+
+.cookie-consent-popup-footer {
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+}
+
+.cookie-consent-popup-paragraph {
+  line-height: 2rem; /* leading-8 */
+  font-size: 25px; /* text-[25px] */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.cookie-consent-popup-cta {
+  padding: 0.75rem; /* p-3 */
+  font-size: 1.125rem; /* text-lg */
+  color: black; /* text-black */
+  background-color: #f8fafc; /* bg-slate-50 */
+  border-radius: 0.5rem; /* rounded-lg */
+  height: 3.75rem; /* h-15 (custom height in Tailwind) */
+}
+
+.pointer {
+  cursor: pointer;
+}
